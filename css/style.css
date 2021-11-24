@@ -1,0 +1,162 @@
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Glacial Indifference', sans-serif;
+  font-size:2em;
+  height: 100%;
+  color: white;
+  line-height: 1.5;
+  background-color:#000000;
+  margin:1%;
+	padding:1%;
+}
+
+header{
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-align: center;
+}
+
+h1{
+  font-size: 2em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2{
+  font-size: 1.5em;
+  text-align: center;
+}
+
+p {
+  font-size: 1.2em;
+  text-align: left;
+}
+
+nav{
+  display: block;
+  text-align: center;
+  }
+
+/* ul.nav_links li a:link, a:visited {
+  color:white;
+} */
+
+ul.nav_links li a:link, a:visited {
+  background-color:black;
+  color: white;
+  margin:0;
+  padding:14px 16px;
+  overflow:hidden;
+  text-decoration: none;
+  display: block;
+}
+
+ul.nav_links li a:hover, a:active {
+  color: black;
+  background-color: #becee8;
+  text-decoration: underline;
+}
+
+a.skip {
+  padding: 6px;
+  position: absolute;
+  top: -1000px;
+  left: 0;
+  background: white;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  }
+
+a.skip:focus{
+  position: absolute;
+  top: 40px;
+}
+
+ul.nav_links li a.active {
+  color: black;
+  background-color: #becee8;
+  text-decoration: underline;
+}
+
+.about-me, .design-thinking, .resume, .contact{
+  background: #becee8;
+  color: black;
+}
+
+.gallery #image1, #image2, #image3, #image4, #image5, #image6, #image7, #image8, #image9{
+  border: 5px solid #becee8;
+  margin: 10px;
+  width: 400px;
+}
+
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 400px;
+  justify-content: center;
+}
+
+.iframe-container {
+  overflow: hidden;
+  /* 16:9 aspect ratio */
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.iframe-container iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
+
+footer{
+  font-size: 0.5em;
+  background-color:#becee8;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  }
+
+a.footer{
+  color: black;
+}
+
+@media screen and (min-width: 768px){
+  /* body{
+		background-color: green;
+  } */
+
+  ul.nav_links li {
+    float: left;
+  }
+
+  .container{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+  }
+
+/*****************************************/
+   @media screen and (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto;
+    }
+
+    a.skip{
+      -webkit-transition: initial;
+      transition: initial;
+    }
+
+    header{
+      background-attachment: initial;
+    }
+  }
